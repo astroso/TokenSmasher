@@ -8,5 +8,6 @@
 > 2) Compile And Open The Checker
 > 3) Tokens be saved on a directory printed on console
 
-
-![M](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1071582837030060032%2FkKV-I01n.jpg&f=1&nofb=1)
+# 401 HTTP REQUEST = DIED TOKEN
+# 403 HTTP REQUEST = LOCKED TOKEN
+# 429 HTTP REQUEST = RATE LIMITED FROM DISCORD API
