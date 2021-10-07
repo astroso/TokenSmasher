@@ -200,11 +200,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checker\tokenchecker.cs" />
-    <Compile Include="Console\Program.cs" />
-    <Compile Include="ConsoleClass1\EasyConsole.cs" />
+    <Compile Include="Checker\Checker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Console Helper\EasyConsole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Variabili\Variables.cs" />
+    <Compile Include="Variables\Variables.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
