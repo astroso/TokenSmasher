@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using TokenSmasher.Helpers;
-using TokenSmasher.Checker.Models;
+using TokenSmasher.Core.Models;
 
 namespace TokenSmasher.Core {
     internal class Checker {

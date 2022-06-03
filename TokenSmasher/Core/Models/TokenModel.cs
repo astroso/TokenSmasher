@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TokenSmasher.Checker.Models {
+namespace TokenSmasher.Core.Models {
     public class TokenModel {
         public static List<string> Tokens = new List<string>();
 
