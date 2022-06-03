@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Drawing;
+using Console = Colorful.Console;
 
-namespace EasyConsoleClass {
-    class EasyConsole {
-
-        public static void Watermark ( ) {
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine ( @"
+namespace TokenSmasher.Helpers {
+    public class ConsoleHelpers {
+        public static void PrintWatermark() {
+            Console.ForegroundColor = Color.Magenta;
+            Console.WriteLine(@"
 
 
 ████████╗ ██████╗ ██╗  ██╗███████╗███╗   ██╗    ███████╗███╗   ███╗ █████╗ ███████╗██╗  ██╗███████╗██████╗ 
@@ -14,25 +15,17 @@ namespace EasyConsoleClass {
    ██║   ██║   ██║██╔═██╗ ██╔══╝  ██║╚██╗██║    ╚════██║██║╚██╔╝██║██╔══██║╚════██║██╔══██║██╔══╝  ██╔══██╗
    ██║   ╚██████╔╝██║  ██╗███████╗██║ ╚████║    ███████║██║ ╚═╝ ██║██║  ██║███████║██║  ██║███████╗██║  ██║
    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝    ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-                                                                                                           " );
-            Console.ForegroundColor = ConsoleColor.White;
-            string version = "1.0 [ edited by @astroso ]";
-            Console.WriteLine ( $" >> version: {version}" );
-
+                                                                                                           ");
+            Console.ForegroundColor = Color.FromArgb(138, 142, 255);
         }
 
-        public static void WriteLine ( object value, ConsoleColor Color, bool read ) {
-            Console.ForegroundColor = Color;
-            Console.WriteLine ( value );
-            Console.ForegroundColor = ConsoleColor.White;
-            if ( read ) Console.ReadLine ( );
-        }
+        public static void PrintWithColor(string info, string text, Color color, bool newLine = false) {
+            if (newLine && !text.Contains("\n"))
+                text += "\n";
 
-        public static void Write ( object value, ConsoleColor Color, bool read ) {
-            Console.ForegroundColor = Color;
-            Console.Write ( value );
-            Console.ForegroundColor = ConsoleColor.White;
-            if ( read ) Console.ReadLine ( );
+            Console.Write($" [{DateTime.Now:HH:mm:ss}] > ", Color.FromArgb(80, 80, 80));
+            Console.Write($"[{info}] ", color);
+            Console.Write(text);
         }
     }
 }
